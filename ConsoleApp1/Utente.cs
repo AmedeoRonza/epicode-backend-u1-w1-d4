@@ -79,6 +79,10 @@ namespace ConsoleApp1
                     Console.WriteLine("Sei proprio sicuro di voler terminare il programma?  (y/n)");
                     Console.ReadKey();
                     break;
+                default:
+                    Console.WriteLine("Opzione non valida");
+                    MenuPrincipale();
+                    break;
             }
         }
         
