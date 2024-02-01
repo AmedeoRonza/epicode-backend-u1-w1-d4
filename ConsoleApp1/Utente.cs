@@ -11,6 +11,7 @@ namespace ConsoleApp1
         private static string _username;
         private static string _password;
         private static string _confermaPassword;
+    
 
         public static string Username { get { return _username; } set { _username = value; } }
         public static string Password { get { return _password; } set { _password = value; } }
@@ -26,7 +27,7 @@ namespace ConsoleApp1
             Console.WriteLine("Conferma Password");
             _confermaPassword = Console.ReadLine();
 
-            if (_username != null || _password == _confermaPassword)
+            if (_username != null && _password == _confermaPassword)
             {
                 Console.WriteLine("Login effettuato con successo");
             }
@@ -57,7 +58,7 @@ namespace ConsoleApp1
             Console.WriteLine("2) Logout");
             Console.WriteLine("3) Verifica data e ora del login");
             Console.WriteLine("4) Lista degli accessi");
-            Console.WriteLine("Termina programma");
+            Console.WriteLine("5) Termina programma");
 
             int scelta = int.Parse(Console.ReadLine());
 
@@ -84,6 +85,7 @@ namespace ConsoleApp1
                     MenuPrincipale();
                     break;
             }
+            MenuPrincipale();
         }
         
          
